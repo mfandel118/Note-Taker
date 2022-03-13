@@ -1,13 +1,17 @@
-// Bring in Express & Path
+// Bring in Express & Path & Declare Router
 const express = require('express');
+const router = express.Router();
 const path = require('path');
 
 //GET Route for notes page
-app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/notes.html'))
+router.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, '../public/notes.html'))
 );
 
 // GET Route for landing page
-app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
+router.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '../public/index.html'))
 );
+
+// Export router
+module.exports = router;
