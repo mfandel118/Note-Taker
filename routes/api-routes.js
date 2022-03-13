@@ -12,11 +12,11 @@ router.get('/api/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
     // res.status(200).json(notes);
     readFromFile(notes)
-    .then((notes) => res.json(JSON.parse(notes)));
+    .then((data) => res.json(JSON.parse(data)));
 });
 
 // POST Route to add new note to db
-router.post('/notes', (req, res) => {
+router.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to add a note`);
 
     // Destructuring assignment for items in req.body
