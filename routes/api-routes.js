@@ -39,9 +39,9 @@ router.post('/api/notes', (req, res) => {
 
 
 // DELETE Route to delete note from db
-router.delete('/api/notes/:id', (req, res) => {
+// router.delete('/api/notes/:id', (req, res) => {
 
-});
+// });
 
 // Export router
 module.exports = router;
