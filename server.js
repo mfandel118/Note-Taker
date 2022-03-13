@@ -6,9 +6,10 @@ const app = express();
 const PORT = 3001;
 
 // Bring in routes
+const apiRoutes = require('./routes/api-routes');
+const htmlRoutes = require('./routes/html-routes');
 
-
-// Route middleware
+// Middleware
 
 
 // Listener to begin server
