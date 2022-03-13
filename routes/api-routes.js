@@ -1,9 +1,15 @@
-// Bring in Express & Path & Declare Router
+// Import Express & Path & Declare Router
 const express = require('express');
-const router = express.Router();
+const notesRouter = express.Router();
 const path = require('path');
 
 
+const newNote = {
+    title,
+    text,
+    
+}
+
 
 // Export router
-module.exports = router;
+module.exports = notesRouter;
