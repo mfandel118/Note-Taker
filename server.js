@@ -10,7 +10,8 @@ const apiRoutes = require('./routes/api-routes');
 const htmlRoutes = require('./routes/html-routes');
 
 // Middleware
-
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 // Listener to begin server
 app.listen(PORT, () => 
