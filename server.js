@@ -12,3 +12,6 @@ const PORT = 3001;
 
 
 // Listener to begin server
+app.listen(PORT, () => 
+    console.log(`Express server listening on PORT: ${PORT}`)
+);
