@@ -2,9 +2,10 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const fs = require('fs');
 const uuid = require('../utils/uuid');
 const notes = require('../db/db.json');
+const {readAndAppend, readFromFile} = require('../utils/fsUtils')
+
 
 // GET Route for all notes in db
 router.get('/api/notes', (req, res) => {
@@ -38,7 +39,7 @@ router.post('/api/notes', (req, res) => {
 
 
 // DELETE Route to delete note from db
-router.delete('/api/notes', (req, res) => {
+router.delete('/api/notes/:id', (req, res) => {
 
 });
 
