@@ -6,8 +6,9 @@ const app = express();
 const PORT = 3001;
 
 // Bring in routes
-const apiRoutes = require('./routes/api-routes');
-const htmlRoutes = require('./routes/html-routes');
+// const apiRoutes = require('./routes/api-routes');
+// const htmlRoutes = require('./routes/html-routes');
+const routes = require('./routes')
 
 // Middleware
 app.use(express.static('public'));
