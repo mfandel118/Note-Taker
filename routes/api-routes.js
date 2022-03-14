@@ -10,9 +10,9 @@ const {readAndAppend, readFromFile} = require('../utils/fsUtils')
 // GET Route for all notes in db
 router.get('/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
-    res.status(200).json(notes);
-    // readFromFile(notes)
-    // .then((data) => res.json(JSON.parse(data)));
+    // res.status(200).json(notes);
+    readFromFile(notes)
+    .then((data) => res.json(JSON.parse(data)));
 });
 
 // POST Route to add new note to db
