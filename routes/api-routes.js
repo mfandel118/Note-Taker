@@ -8,7 +8,7 @@ const {readAndAppend, readFromFile} = require('../utils/fsUtils')
 
 
 // GET Route for all notes in db
-router.get('/api/notes', (req, res) => {
+router.get('/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
     // res.status(200).json(notes);
     readFromFile(notes)
@@ -16,8 +16,9 @@ router.get('/api/notes', (req, res) => {
 });
 
 // POST Route to add new note to db
-router.post('/api/notes', (req, res) => {
+router.post('/notes', (req, res) => {
     console.info(`${req.method} request received to add a note`);
+    console.log(req.body);
 
     // Destructuring assignment for items in req.body
     const { title, text } = req.body;
@@ -35,7 +36,7 @@ router.post('/api/notes', (req, res) => {
         res.error(`Error adding new note. Please try again. Make sure to include a title for your note!`)
     }
 
-});
+}); 
 
 
 // DELETE Route to delete note from db
