@@ -2,16 +2,16 @@
     {
         "title": "Note",
         "text": "This is a test note.",
-        "note_id": "17c5"
+        "id": "17c5"
     },
     {
         "title": "Note2",
         "text": "This is another test note.",
-        "note_id": "3g62"
+        "id": "3g62"
     },
     {
         "title": "Note3",
         "text": "This is a third test note.",
-        "note_id": "6dj8"
+        "id": "6dj8"
     }
 ]

@@ -31,7 +31,7 @@ router.post('/notes', (req, res) => {
         const newNote = {
             title,
             text,
-            note_id: uuid()
+            id: uuid()
         };
         readAndAppend(newNote, './db/db.json');
         res.json(`New note added successfully!`);
@@ -47,7 +47,7 @@ router.delete('/notes/:id', (req, res) => {
     // console.log(noteId);
 
     const filteredNotes = notes.filter((note) => {
-        return note.note_id !== noteId
+        return note.id !== noteId
     });
     console.log(filteredNotes);
     
