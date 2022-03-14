@@ -21,4 +21,4 @@ const readAndAppend = (content, file) => {
 };
 
 // Export needed functions
-module.exports = {readAndAppend, readFromFile};
+module.exports = fs
