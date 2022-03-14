@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const uuid = require('../utils/uuid');
-const notes = '../db/db.json';
+const notes = require('../db/db.json');
 const {readAndAppend, readFromFile} = require('../utils/fsUtils')
 
 
